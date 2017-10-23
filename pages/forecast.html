@@ -1,0 +1,23 @@
+
+<p>
+
+    <a href="#/">Back to Search</a>
+
+</p>
+
+Forecast for {{city}}
+<hr/>
+<div class="row">
+      
+       <ul class="nav nav-pills">
+          <li ng-class="{'active':days==2}"><a href="#/forecast/2">2</a></li>
+          <li ng-class="{'active':days==5}"><a href="#/forecast/5">5</a></li>
+          <li ng-class="{'active':days==7}"><a href="#/forecast/7">7</a></li>
+        </ul>
+</div>
+<hr/>
+<div class="row">
+        <div class="col-md-12" ng-repeat="w in weatherResult.list">
+            <weather-panel weather-report="w" convert-date="convertDate(dt)" convert-weather="convertWeather(temp)" date-format="MMMM d,y @ h:mma"></weather-panel>
+        </div>
+</div>

@@ -1,0 +1,6 @@
+<div class="panel panel-default" >
+      <div class="panel-heading">
+          <div class="panel-title">{{convertDate({dt:weatherReport.dt})| date : dateFormat}} </div>
+      </div>
+      <div class="panel-body">Temperature : {{convertWeather({temp:weatherReport.main.temp})}}</div>
+</div>
